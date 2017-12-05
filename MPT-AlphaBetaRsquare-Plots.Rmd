@@ -1,5 +1,5 @@
 ---
-title: "MPT & other measurement"
+title: "MPT & other measurements"
 output:
   html_notebook:
     code_folding: hide
@@ -68,16 +68,15 @@ Returnsxts.Rf.col = 9  #Defining riskfree invest
 Symbols
 ```
 
-# Pulling info and assignment
+# Data input
 
 This section pulls the data, computes its monthly return and assign them appropriately.
 
-```{r ,warning = F, message = F}
+```{r input,warning = F, message = F}
 
 # create environment to load data into
 Data <- new.env()
 getSymbols(Symbols, from="2007-01-01", env=Data)
-
 
 # calculate returns, merge, and create data.frame (eapply loops over all
 # objects in an environment, applies a function, and returns a list)
